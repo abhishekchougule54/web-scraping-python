@@ -1,3 +1,4 @@
+#import libraries
 from flair.models import TextClassifier
 from flair.data import Sentence
 from nltk.sentiment.vader import SentimentIntensityAnalyzer

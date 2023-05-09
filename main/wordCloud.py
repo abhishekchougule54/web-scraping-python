@@ -1,3 +1,4 @@
+#import libraries
 from wordcloud import WordCloud, STOPWORDS
 import matplotlib.pyplot as plt
 from sqlalchemy import create_engine

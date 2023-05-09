@@ -1,3 +1,4 @@
+#import libraries
 from urllib.request import urlopen, Request
 from bs4 import BeautifulSoup
 from sqlalchemy import create_engine
