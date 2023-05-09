@@ -29,14 +29,3 @@ def flair_sentiment_analyser(parsed_news):
     return parsed_news_df
 
 
-def vader_sentiment_analyser(parsed_news):
-
-    vader = SentimentIntensityAnalyzer()
-    columns = ['ticker', 'date', 'headline']
-    parsed_and_scored_news = pd.DataFrame(parsed_news, columns=columns)
-    sentiment_scores = parsed_and_scored_news['headline'].apply(vader.polarity_scores).tolist()
-    scores_df = pd.DataFrame(sentiment_scores)
-    parsed_and_scored_news = parsed_and_scored_news.join(scores_df, rsuffix='_right')
-    parsed_and_scored_news = parsed_and_scored_news.replace(r'\n',' ', regex=True) 
-    return parsed_and_scored_news
-
