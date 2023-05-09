@@ -42,9 +42,9 @@ for ticker,news_data in news_data.items():
 
 
 
-dataflair_df=flair_sentiment_analyser(parsed_news)
+flair_df=flair_sentiment_analyser(parsed_news)
 
 engine = create_engine('postgresql://postgres:root@localhost:5432/findata_sentimentanalysis')
-dataflair_df.to_sql('stock_news_sentiment_scores', engine,if_exists='append', index=False)
+flair_df.to_sql('stock_news_sentiment_scores', engine,if_exists='append', index=False)
 
 
