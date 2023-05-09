@@ -23,7 +23,8 @@ for val in dataflair_read_table.headline:
         tokens[i] = tokens[i].lower()
      
     comment_words += " ".join(tokens)+" "
- 
+
+#pass tokenized words to wordcloud function
 wordcloud = WordCloud(width = 800, height = 800,
                 background_color ='white',
                 stopwords = stopwords,
